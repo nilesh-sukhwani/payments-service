@@ -1,0 +1,92 @@
+version: '3'
+
+volumes:
+  staging_postgres_data: {}
+  staging_postgres_data_backups: {}
+  staging_traefik: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/staging/django/Dockerfile
+    image: payment_service_staging_django
+    container_name: payment_service_staging_django
+    platform: linux/x86_64
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - ./.envs/.staging/.django
+      - ./.envs/.staging/.postgres
+#    ports:
+#      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/staging/postgres/Dockerfile
+    image: payment_service_production_postgres
+    container_name: payment_service_staging_postgres
+
+    volumes:
+      - production_postgres_data:/var/lib/postgresql/data:Z
+      - production_postgres_data_backups:/backups:z
+    env_file:
+      - ./.envs/.staging/.postgres
+#    ports:
+#      - "5432:5432"
+
+
+  traefik:
+     build:
+       context: .
+       dockerfile: ./compose/production/traefik/Dockerfile
+     image: payment_service_production_traefik
+     depends_on:
+       - django
+     volumes:
+       - production_traefik:/etc/traefik/acme:z
+     ports:
+       - "0.0.0.0:80:80"
+       - "0.0.0.0:443:443"
+       - "0.0.0.0:5555:5555"
+
+  redis:
+    image: redis:6
+    container_name: payment_service_staging_redis
+
+  celeryworker:
+    <<: *django
+    image: payment_service_staging_celeryworker
+    container_name: payment_service_staging_celeryworker
+#    ports: []
+    command: /start-celeryworker
+
+  celerybeat:
+    <<: *django
+    image: payment_service_staging_celerybeat
+    container_name: payment_service_staging_celerybeat
+#    ports: []
+    command: /start-celerybeat
+
+  flower:
+    <<: *django
+    image: payment_service_staging_flower
+    container_name: payment_service_staging_flower
+#    ports:
+#      - "5555:5555"
+    command: /start-flower
+
+  prometheus:
+    image: prom/prometheus:v2.30.3
+    restart: 'no'
+    ports:
+      - 9090:9090
+    network_mode: host
+
+  grafana:
+    image: grafana/grafana:6.5.2
+    ports:
+    - 3060:3000

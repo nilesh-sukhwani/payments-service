@@ -1,0 +1,15 @@
+echo "tagging images"
+
+docker tag payment_service_staging_django gavldigital.azurecr.io/payment_service_staging_django
+docker tag payment_service_staging_celeryworker gavldigital.azurecr.io/payment_service_staging_celeryworker
+docker tag payment_service_staging_flower gavldigital.azurecr.io/payment_service_staging_flower
+docker tag payment_service_staging_traefik gavldigital.azurecr.io/payment_service_staging_traefik
+docker tag payment_service_staging_postgres gavldigital.azurecr.io/payment_service_staging_postgres
+
+docker push gavldigital.azurecr.io/payment_service_staging_django
+docker push gavldigital.azurecr.io/payment_service_staging_celeryworker
+docker push gavldigital.azurecr.io/payment_service_staging_flower
+docker push gavldigital.azurecr.io/payment_service_staging_traefik
+docker push gavldigital.azurecr.io/payment_service_staging_postgres
+
+%WAIT%

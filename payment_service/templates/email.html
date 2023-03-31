@@ -1,0 +1,214 @@
+{% load static %}
+<tr>
+    <td align="left" valign="top"
+        style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#373737;background-color:#fff;padding:20px;border:solid 1px #bcc2cf">
+        <span class="im">Dear <strong>{{delivery_name}}</strong>,<br> <br> Thank you for your order from <a
+                href="http://www.godrejagrovet.com"
+                style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#e85f04;text-decoration:underline"
+                target="_blank"
+                data-saferedirecturl="https://www.google.com/url?q=http://www.godrejagrovet.com&amp;source=gmail&amp;ust=1669812429711000&amp;usg=AOvVaw09lbYGyb2wl7gpPU8B-HjU">http://www.godrejagrovet.com</a><br>
+            <br> For your convenience, we have included a copy of your order below. The charge will appear on your
+            credit card / Account Statement as<strong> 'ccavenue.com/charge'</strong><br> <br> <br> </span>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td align="left" valign="top"
+                        style="background-color:#fff;padding:15px 20px;border:solid 1px #dbdfe6">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="6" style="border:solid 1px #e4e6eb">
+                            <tbody>
+                                <tr>
+                                    <td width="47%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737;background-color:#f7f7f7">
+                                        <strong>Order No#</strong>
+                                    </td>
+                                    <td width="35%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737;background-color:#f7f7f7;border-left:solid 1px #e4e6eb">
+                                        <strong>CCAvenue Reference#</strong>
+                                    </td>
+                                    <td width="18%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737;background-color:#f7f7f7;border-left:solid 1px #e4e6eb">
+                                        <strong>Order Date#</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" valign="middle" height="1"
+                                        style="background-color:#e4e6eb;padding:0px"><img
+                                            src="https://ci4.googleusercontent.com/proxy/6SEzB47n9SIVMkjCf0cj3olbfkurAQRyUQHjy0P5lBJAXj9APv725Jpjou-fkmy9ehmJyoFZaFodvUcoCHVRD9_h-pk=s0-d-e1-ft#https://test.ccavenue.com/images/blank_spacer.gif"
+                                            width="1" height="1" class="CToWUd" data-bit="iit"></td>
+                                </tr>
+                                <tr>
+                                    <td width="47%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                        {{order_id}}
+                                    </td>
+                                    <td width="35%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737;border-left:solid 1px #e4e6eb">
+                                        {{tracking_id}}
+                                    </td>
+                                    <td width="18%" height="18" align="left" valign="middle"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737;border-left:solid 1px #e4e6eb">
+                                        {{trans_date}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br> <br>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td height="25" colspan="4" align="left" valign="top"
+                                        style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#0072c6;border-bottom:solid 1px #dbdfe6">
+                                        Billing Details
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" valign="top">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="412" align="left" valign="top">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="23%" align="right" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        <strong>Customer:</strong>
+                                                    </td>
+                                                    <td width="77%" align="left" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        {{delivery_name}}&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                                                            href="mailto:parth.d@peerbits.com"
+                                                            style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737"
+                                                            target="_blank">parth.d@peerbits.com</a>&nbsp;<wbr>&nbsp;|&nbsp;&nbsp;{{delivery_tel}}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        <strong>Address:</strong>
+                                                    </td>
+                                                    <td align="left" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        {{delivery_address}}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        <strong>Bank Ref
+                                                            #:</strong>
+                                                    </td>
+                                                    <td align="left" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        {{bank_ref_no}}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                        <strong>Instructions:</strong>
+                                                    </td>
+                                                    <td align="left" valign="top"
+                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td width="20" align="left" valign="top"><img
+                                            src="https://ci4.googleusercontent.com/proxy/6SEzB47n9SIVMkjCf0cj3olbfkurAQRyUQHjy0P5lBJAXj9APv725Jpjou-fkmy9ehmJyoFZaFodvUcoCHVRD9_h-pk=s0-d-e1-ft#https://test.ccavenue.com/images/blank_spacer.gif"
+                                            width="20" height="1" class="CToWUd" data-bit="iit"></td>
+                                    <td width="244" align="right" valign="top">
+                                        <table width="244" border="0" cellspacing="0" cellpadding="10">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" valign="top"
+                                                        style="background-color:#f7f7f7;border:solid 1px #e4e6eb">
+                                                        <table width="244" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="51%" height="19" align="right"
+                                                                        valign="top"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        Order Amount:&nbsp;
+                                                                    </td>
+                                                                    <td width="16%" height="19" align="center"
+                                                                        valign="top"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        INR
+                                                                    </td>
+                                                                    <td width="33%" height="19" align="right"
+                                                                        valign="top"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        {{mer_amount}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3"><img
+                                                                            src="https://ci4.googleusercontent.com/proxy/6SEzB47n9SIVMkjCf0cj3olbfkurAQRyUQHjy0P5lBJAXj9APv725Jpjou-fkmy9ehmJyoFZaFodvUcoCHVRD9_h-pk=s0-d-e1-ft#https://test.ccavenue.com/images/blank_spacer.gif"
+                                                                            width="1" height="1" class="CToWUd"
+                                                                            data-bit="iit"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="22" align="right" valign="bottom"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        <strong>Net
+                                                                            Payable:&nbsp;</strong>
+                                                                    </td>
+                                                                    <td height="20" align="center" valign="bottom"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        <strong>INR</strong>
+                                                                    </td>
+                                                                    <td height="20" align="right" valign="bottom"
+                                                                        style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#373737">
+                                                                        <strong>{{mer_amount}}</strong>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="adm">
+                                <div id="q_158" class="ajR h4">
+                                    <div class="ajT"></div>
+                                </div>
+                            </div>
+                            <div class="h5"><br> <br>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td height="1" align="left" valign="top"
+                                                style="background-color:#e4e6eb;padding:0px" colspan="2"><img
+                                                    src="https://ci4.googleusercontent.com/proxy/6SEzB47n9SIVMkjCf0cj3olbfkurAQRyUQHjy0P5lBJAXj9APv725Jpjou-fkmy9ehmJyoFZaFodvUcoCHVRD9_h-pk=s0-d-e1-ft#https://test.ccavenue.com/images/blank_spacer.gif"
+                                                    width="1" height="1" class="CToWUd" data-bit="iit"></td>
+                                            <td width="74%" align="left" valign="top"
+                                                style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#373737">
+                                                <strong>CUSTOMER CARE<br></strong>
+                                                http://www.godrejagrovet.com<br>
+                                                Email : gavlho@godrejagrovet.com<br>
+                                                Contact Info : 00-000000000000
+                                            </td>
+                                            <td width="26%" align="right" valign="bottom">
+                                                <img src="https://www.godrejagrovet.com/public/images/logo.png"
+                                                    width="150" height="46" border="0" class="CToWUd" data-bit="iit"
+                                                    jslog="138226; u014N:xr6bB; 53:W2ZhbHNlLDJd"
+                                                    style="background-color: #0A0A0A;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>

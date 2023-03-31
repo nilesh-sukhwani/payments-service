@@ -1,0 +1,13 @@
+version: '3'
+services:
+  django:
+    image: cloudpeerbits/payment_service_staging_django:latest
+    container_name: payment_service_staging_django
+    platform: linux/x86_64
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+    ports:
+      - "80:80"
+    command: /start

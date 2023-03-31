@@ -1,0 +1,124 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>payments-service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A payment service for integration with GAVL's internal apps."
+    />
+    <meta name="author" content="Godrej-Agrovet" />
+    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
+    {% block css %}
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    <!-- This file stores project-specific CSS -->
+    <link href="{% static 'css/project.css' %}" rel="stylesheet" />
+    {% endblock css %}
+    <!-- Le javascript
+
+    {% block javascript %}
+    <!-- Bootstrap JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+      integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Your stuff: Third-party javascript libraries go here -->
+    <!-- place project specific Javascript in this file -->
+    <script defer src="{% static 'js/project.js' %}"></script>
+    {% endblock javascript %}
+  </head>
+
+  <body>
+    <div
+      class=""
+      style="
+        width: 650px;
+        margin: 0px auto;
+        color: #8d8e90;
+        font-family: arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.82857143;
+        -webkit-font-smoothing: antialiased;
+      "
+    >
+      <div>
+        <div
+          class="header"
+          style="
+            background-color: #000000;
+            padding: 0px 39px;
+            text-align: center;
+          "
+        >
+          <a href='#"' target="_blank" rel="noopener"
+            ><img style="vertical-align: middle;"
+            src="https://www.godrejagrovet.com/public/images/logo.png" "=""
+            alt=" Logo" width="250" height="90"></a
+          >
+        </div>
+        <div
+          class="main-content"
+          style="
+            overflow: hidden;
+            padding: 40px 40px;
+            border: 1px solid #e8ebf1;
+          "
+        >
+          <h4 style="padding-bottom: 10px; color: #3c3737; font-weight: 600">
+            Payment Services
+          </h4>
+          <p>
+            Here is a admin pannel link please
+            <a href="{% url 'admin:index' %}" style="color: #e29504">
+              <strong>Click here</strong></a
+            >
+          </p>
+        </div>
+        <div
+          class="footer"
+          style="
+            overflow: hidden;
+            background-color: #000000;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              background-color: #000000;
+              border-top: 1px solid rgba(255, 255, 255, 0.1);
+              padding: 20px 10px;
+              color: #b1b6ba;
+              font-size: 13px;
+            "
+          >
+            <div>
+              ©
+              <a
+                style="color: #e29504"
+                href="https://www.godrejagrovet.com/"
+                target="_blank"
+                rel="noopener"
+                >Godrej Agrovet</a
+              >
+              Limited 2022. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
