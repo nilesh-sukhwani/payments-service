@@ -53,12 +53,6 @@ coverage.xml
 # Django stuff:
 staticfiles/
 
-payment_service/payment_gateway/migrations/**
-!payment_service/payment_gateway/migrations
-!payment_service/payment_gateway/migrations/__init__.py
-payment_service/users/migrations/**
-!payment_service/users/migrations
-!payment_service/users/migrations/__init__.py
 # Sphinx documentation
 docs/_build/
 
